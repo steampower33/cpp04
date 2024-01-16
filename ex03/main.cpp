@@ -4,12 +4,6 @@
 #include "Character.hpp"
 #include "IMateriaSource.hpp"
 #include "MateriaSource.hpp"
-#include <unistd.h>
-
-void my_leaks_handler()
-{
-	system("leaks ex03");
-}
 
 int main()
 {
@@ -37,6 +31,5 @@ int main()
 	delete bob;
 	delete me;
 	delete src;
-	atexit(my_leaks_handler);
 	return 0;
 }

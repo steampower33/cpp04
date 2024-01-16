@@ -4,11 +4,6 @@
 #include "WrongAnimal.hpp"
 #include "WrongCat.hpp"
 
-void my_leaks_handler()
-{
-	system("leaks ex00");
-}
-
 int main()
 {
 	const Animal* meta = new Animal();
@@ -24,11 +19,9 @@ int main()
 	std::cout << a->getType() << " " << std::endl;
 	a->makeSound();
 
-
 	delete a;
 	delete i;
 	delete j;
 	delete meta;
-	// atexit(my_leaks_handler);
 	return 0;
 }
