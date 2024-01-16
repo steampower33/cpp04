@@ -2,6 +2,11 @@
 #include "Dog.hpp"
 #include "Cat.hpp"
 
+void my_leaks_handler()
+{
+	system("leaks ex01");
+}
+
 int main()
 {
 	// Animal 배열 선언 및 Dog Cat 2개씩 설정
@@ -89,6 +94,7 @@ int main()
 
 	delete c_dup;
 	delete c;
+	// atexit(my_leaks_handler);
 
 	return 0;
 }

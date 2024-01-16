@@ -2,6 +2,11 @@
 #include "Dog.hpp"
 #include "Cat.hpp"
 
+void my_leaks_handler()
+{
+	system("leaks ex02");
+}
+
 int main()
 {
 	// Animal은 추상 클래스이기 때문에 컴파일 에러 발생
@@ -91,6 +96,7 @@ int main()
 
 	delete c_dup;
 	delete c;
+	// atexit(my_leaks_handler);
 
 	return 0;
 }

@@ -13,8 +13,6 @@ public:
 	const std::string & getType() const; //Returns the materia type
 	Cure* clone() const;
 	void use(ICharacter& target);
-protected:
-	std::string _type;
 };
 
 #endif

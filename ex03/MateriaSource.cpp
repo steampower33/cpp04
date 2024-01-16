@@ -5,12 +5,6 @@ MateriaSource::MateriaSource() {
 		_templates[i] = NULL;
 }
 
-MateriaSource::MateriaSource(const std::string& name) {
-	_name = name;
-	for (int i = 0; i < 4; i++)
-		_templates[i] = NULL;
-}
-
 MateriaSource::MateriaSource(const MateriaSource& other) {
 	*this = other;
 }
@@ -53,7 +47,7 @@ void MateriaSource::learnMateria(AMateria* m) {
 }
 
 AMateria* MateriaSource::createMateria(const std::string& type) {
-	for (int i = 0; i < 4; ++i)
+	for (int i = 0; i < 4; i++)
 	{
 		if (_templates[i] && _templates[i]->getType() == type)
 			return _templates[i]->clone();
