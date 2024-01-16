@@ -89,8 +89,8 @@ int main()
 
 	std::cout << std::endl;
 
-	delete c;
 	delete c_dup;
+	delete c;
 
 	return 0;
 }

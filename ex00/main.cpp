@@ -19,9 +19,10 @@ int main()
 	std::cout << a->getType() << " " << std::endl;
 	a->makeSound();
 
-	delete meta;
-	delete j;
-	delete i;
+
 	delete a;
+	delete i;
+	delete j;
+	delete meta;
 	return 0;
 }

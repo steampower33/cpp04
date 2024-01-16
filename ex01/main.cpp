@@ -57,8 +57,8 @@ int main()
 
 	std::cout << std::endl;
 
-	delete d;
 	delete d_dup;
+	delete d;
 
 	std::cout << std::endl;
 
@@ -87,8 +87,8 @@ int main()
 
 	std::cout << std::endl;
 
-	delete c;
 	delete c_dup;
+	delete c;
 
 	return 0;
 }
