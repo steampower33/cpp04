@@ -4,6 +4,11 @@
 #include "WrongAnimal.hpp"
 #include "WrongCat.hpp"
 
+void my_leaks_handler()
+{
+	system("leaks ex00");
+}
+
 int main()
 {
 	const Animal* meta = new Animal();
@@ -24,5 +29,6 @@ int main()
 	delete i;
 	delete j;
 	delete meta;
+	// atexit(my_leaks_handler);
 	return 0;
 }
