@@ -4,8 +4,6 @@
 
 int main()
 {
-	// Animal은 추상 클래스이기 때문에 컴파일 에러 발생
-	// Animal animal;
 	// Animal 배열 선언 및 Dog Cat 2개씩 설정
 	const Animal* a[4];
 
@@ -36,7 +34,7 @@ int main()
 
 	std::cout << "[깊은 복사 확인 - Dog]" << std::endl;
 	Dog* d = new Dog();
-	Dog* d_dup = new Dog();
+	Dog* d_dup = new Dog(*d);
 
 	std::cout << std::endl;
 
@@ -59,14 +57,14 @@ int main()
 
 	std::cout << std::endl;
 
-	delete d;
 	delete d_dup;
+	delete d;
 
 	std::cout << std::endl;
 
 	std::cout << "[깊은 복사 확인 - Cat]" << std::endl;
 	Cat* c = new Cat();
-	Cat* c_dup = new Cat();
+	Cat* c_dup = new Cat(*c);
 
 	std::cout << std::endl;
 

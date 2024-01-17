@@ -34,7 +34,7 @@ int main()
 
 	std::cout << "[깊은 복사 확인 - Dog]" << std::endl;
 	Dog* d = new Dog();
-	Dog* d_dup = new Dog();
+	Dog* d_dup = new Dog(*d);
 
 	std::cout << std::endl;
 
@@ -64,7 +64,7 @@ int main()
 
 	std::cout << "[깊은 복사 확인 - Cat]" << std::endl;
 	Cat* c = new Cat();
-	Cat* c_dup = new Cat();
+	Cat* c_dup = new Cat(*c);
 
 	std::cout << std::endl;
 

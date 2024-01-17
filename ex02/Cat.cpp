@@ -11,7 +11,7 @@ Cat::~Cat() {
 	std::cout << "Cat Destructor called" << std::endl;
 }
 
-Cat::Cat(const Cat& other) : Animal(other) {
+Cat::Cat(const Cat& other) : Animal(other), _brain(NULL) {
 	std::cout << "Cat Copy constructor called" << std::endl;
 	*this = other;
 }
